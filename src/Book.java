@@ -26,7 +26,7 @@ public class Book extends Document {
     }
 
     @Override
-    public void printInfo() {
+    public void printDocument() {
         System.out.println("BOOK INFO");
         System.out.println("Document ID: " + getDocumentID());
         System.out.println("Title: " + getTitle());
