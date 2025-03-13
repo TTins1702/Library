@@ -17,7 +17,6 @@ public class Library {
      * @param document new document.
      */
     public void addDocument(Document document) {
-        System.out.println("Enter the name of the document you want to add: ");
         System.out.println("Document ID:");
         String id = sc.nextLine();
         if(findDocumentbyID(id) == null) {
@@ -45,19 +44,16 @@ public class Library {
      * Return document.
      * @param document the document want to return.
      */
-    public void returnDocument(Document document) {
-        System.out.println("Enter the name of the document you want to return: ");
-        System.out.println("Document ID:");
+    public void removeDocument(Document document) {
+        System.out.printf("Enter the ID of the document you want to remove: ");
         String id = sc.nextLine();
 
         if(findDocumentbyID(id) == null) {
-            System.out.println("This Document ID was returned by another user");
-            return;
+            System.out.println("This Document ID was removed by another user");
         }
 
         documents.remove(findDocumentbyID(id));
-        System.out.println("Documents returned successfully");
-
+        System.out.println("Documents removed successfully");
     }
 
     /**
